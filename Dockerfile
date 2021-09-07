@@ -1,5 +1,5 @@
 # build
-FROM node:16-alpine
+FROM node:16-alpine as build-vue
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY ./client/package*.json ./
@@ -19,7 +19,7 @@ RUN apk update && apk add --no-cache python3 && \
     rm -r /root/.cache
 RUN apk update && apk add postgresql-dev gcc g++ python3-dev musl-dev
 RUN apk add build-base
-COPY --from=0 /app/dist /usr/share/nginx/html
+COPY --from=build-vue /app/dist /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY ./server/requirements.txt .
 RUN pip install -r requirements.txt
