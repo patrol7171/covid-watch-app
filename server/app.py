@@ -2,10 +2,8 @@ from flask_cors import CORS
 import os
 import flask
 from flask import Flask, render_template, json, request, redirect, url_for, jsonify
-from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import uuid
 import api_utils as au
 import config
 
@@ -26,7 +24,7 @@ local_csv_path1 = "./static/data/us_covid_data.csv"
 local_csv_path2 = "./static/data/country_covid_data.csv"
 local_json_path = "./static/data/timestamp.json"
 
-#Create csv file of downloaded data -- also a scheduled job
+#Create csv file of downloaded data -- will eventually be a scheduled job
 au.get_us_data()
 
 
