@@ -48,9 +48,8 @@ def get_us_data():
     df = df.iloc[1: , :] #Drop USA totals which is the first line
     df = df.replace('\n','', regex=True) #Remove newline characters
     df = df.fillna(0) #Replace nan with zeroes
-    #df = df.replace(' ',0) #Replace spaces with zeroes   
-    df_sorted = df.sort_values(by = 'State')
-    #Save data to csv--eventually will be a scheduled job
+    df_sorted = df.sort_values(by = 'State')#Sort data in ABC order by State
+    #Save data to csv
     df_sorted.to_csv(local_csv_path1, index = False)
 
 

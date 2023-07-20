@@ -57,8 +57,8 @@
 			<div class = "container">
 				<div class="row">
 					<div class="col-sm-12">
-						<small>Covid Watch &copy; <span id="year">2021</span></small><br>
-						<small>Designed by <a href="https://patrol7171.github.io" class="external" target="_blank">P. Rollins</a></small>
+						<small>Covid Watch &copy; <span id="year">2023</span></small><br>
+						<small>Designed by <a href="https://devpatrol1.github.io" class="external" target="_blank">P. Rollins</a></small>
 					</div>
 				</div>
 			</div>

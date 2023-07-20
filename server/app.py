@@ -14,8 +14,9 @@ app = Flask(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 ###**CONFIG FOR LOCAL DEV**### -->
-#app.config.from_object(config.DevelopmentConfig)
-###**CONFIG FOR PRODUCTION**### -->
+# app.config.from_object(config.DevelopmentConfig)
+
+# ###**CONFIG FOR PRODUCTION**### -->
 app.config.from_object(config.ProductionConfig)
 
 APP_ROOT = os.path.join(os.path.dirname(__file__), '..')
@@ -24,7 +25,7 @@ local_csv_path1 = "./static/data/us_covid_data.csv"
 local_csv_path2 = "./static/data/country_covid_data.csv"
 local_json_path = "./static/data/timestamp.json"
 
-#Create csv file of downloaded data -- will eventually be a scheduled job
+#Create csv file of downloaded data
 au.get_us_data()
 
 
