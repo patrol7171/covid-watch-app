@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row mt-1">
 			<div class="col">
-				<h3>The COVID-19 Top Ten Stats for the US</h3>
+				<h3>The COVID-19 Top Ten Stats Snapshot for the US</h3>
 				<small class="fw-lighter fst-italic">Last updated: {{ timestamp }}</small>
 			</div>
 		</div>

@@ -4,6 +4,7 @@ services:
 
 variables:
   DOCKER_DRIVER: overlay
+  CI_REGISTRY: registry.gitlab.com
   CACHE_IMAGE: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}
  
 stages:
@@ -30,8 +31,6 @@ docker-build:
         "."
     - docker push $CACHE_IMAGE:build-vue
     - docker push $CACHE_IMAGE:production
-    - chmod +x ./release.sh
-    - ./release.sh
 
 deploy-staging:
   stage: deploy
