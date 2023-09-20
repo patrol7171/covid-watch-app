@@ -26,6 +26,8 @@ RUN pip install -r requirements.txt
 RUN pip install --no-cache-dir pandas --no-binary :all:
 RUN pip install gunicorn
 COPY ./server .
+ENV PORT 80
+EXPOSE 80
 CMD gunicorn -b 0.0.0.0:5000 app:app --daemon && \
       sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && \
       nginx -g 'daemon off;'
