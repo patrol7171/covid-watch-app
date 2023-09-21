@@ -10,6 +10,7 @@ variables:
   CI_REGISTRY_IMAGE: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}
   APP_ENV_NAME: covid-watch-dev
   APP_NAME: covid-watch
+  DOCKER_TLS_CERTDIR: ""
  
 stages:
   - build
