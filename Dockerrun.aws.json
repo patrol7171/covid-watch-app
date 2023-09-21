@@ -1,0 +1,15 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "registry.gitlab.com/devpatrol1/covid-watch-project:latest"
+    },
+    "Authentication": {
+        "Bucket": "elasticbeanstalk-us-west-2-054804664548",
+        "Key": "config.json"
+    },
+    "Ports": [
+      {
+        "ContainerPort": 80
+      }
+    ]
+}
