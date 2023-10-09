@@ -1,0 +1,1 @@
+docker run -d --name flask-vue -e "PORT=8080" -p 8007:8080 covid-watch:latest -- --host=0.0.0.0
