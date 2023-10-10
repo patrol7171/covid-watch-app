@@ -1,7 +1,0 @@
-{
-	"auths": {
-		"registry.gitlab.com": {
-			"auth": "$DEPLOY_TOKEN"
-		}
-	}
-}
